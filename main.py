@@ -60,13 +60,13 @@ def field():
     def sendotp():
         global otp
         otp = random.randint(1000, 9999)
-        sid = "ACbe1bf7a945ea6711c298daebc86fa510"
-        auth = "de0c764adbbcafca88cfb16496b6a93e"
+        sid = " " # sending id
+        auth = " " # receiving id
         cli = Client(sid, auth)
         mg = cli.messages.create(
             body=f"your OTP is {otp}",
             from_="+12092458297",
-            to="+916381771332"
+            to=" " ## to number
         )
 
     try:
@@ -119,13 +119,13 @@ def login():
         code.insert(0,"Password")
         code.config(show="",font=("Microsoft YaHei UI Light",11))
         try:
-            sid = "ACbe1bf7a945ea6711c298daebc86fa510"
-            auth = "de0c764adbbcafca88cfb16496b6a93e"
+            sid = " " # sending id
+            auth = " " # receiving id
             cli = Client(sid, auth)
             mg = cli.messages.create(
                 body="Dear ,Greetings! You have successfully signed in to the fees management system!",
                 from_="+12092458297",
-                to="+916381771332"
+                to=" " ## to number
             )
         except Exception :
             pass
